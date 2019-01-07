@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+   <head>
+      
+   </head>
+   <body>
+      <script>
+       function isPalindrome(str) {
+           for (var k = 0; k < str.length; k++) {
+               if (str[k] !== str[str.length - 1 - k]) {
+                   return false;
+               }
+           }
+           return true;
+       }
+
+       function longestPalindrome(str) {
+           var longer = '';
+           var tmpStr = '';
+           var arr = [];
+           for (var i = 0; i < str.length; i++) {
+               for (var j = 0; j < str.length; j++) {
+                   tmpStr = str.slice(i, j + 1);
+                   if (isPalindrome(tmpStr)) {
+                       if ((tmpStr.length > longer.length)) {
+                           longer = tmpStr;
+                           arr.length = 0;
+                           arr.push(tmpStr);
+                       } else if ((tmpStr.length === longer.length)) {
+                           arr.push(tmpStr);
+                       }
+                   }
+               }
+           }
+           return arr;
+       }
+
+       console.log(longestPalindrome('abracadabra'));
+       console.log(longestPalindrome('bananas'));
+
+      </script>
+   </body>
+</html>
+

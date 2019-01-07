@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+   <head>
+      
+   </head>
+   <body>
+      <script>
+       function longestSub(str) {
+           var newStr = "";
+           for (var i = 0; i < str.length; i++) {
+               if (newStr.indexOf(str[i]) === -1) {
+                   newStr += str[i];
+               }
+           }
+           return newStr;
+       }
+       console.log(longestSub("google.com"));
+
+      </script>
+   </body>
+</html>
+

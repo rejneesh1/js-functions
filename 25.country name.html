@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+   <head>
+      
+   </head>
+   <body>
+      <script>
+       function ex25(arr) {
+           var res = arr.sort(function(a, b) {
+               return b.length - a.length;
+           });
+           return res[0];
+       }
+
+       console.log(ex25(["Australia", "Germany", "United States of America"]));
+
+      </script>
+   </body>
+</html>
+

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+   <head>
+      <script>
+          function test(s) {
+              var ar = [];
+
+              for (var i = 0; i < s.length; i++) {
+                  for (var j = i; j < s.length; j++) {
+                      ar.push(s.substring(i, j + 1));
+                  }
+              }
+
+              return ar.join(",");
+          }           
+      </script>
+   </head>
+   <body>
+      
+   </body>
+</html>
+

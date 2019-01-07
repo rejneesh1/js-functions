@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+   <head>
+      
+   </head>
+   <body>
+      <script>
+       function ex22(str) {
+           for (var i = 0; i < str.length; i++) {
+               var res = str.charAt(i);
+               if (str.indexOf(res) == i && str.indexOf(res, i + 1) == -1) {
+                   return res;
+               }
+           }
+           return null;
+       }
+
+       console.log(ex22("aabwbb"));
+
+      </script>
+   </body>
+</html>
+

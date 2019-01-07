@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+   <head>
+      
+   </head>
+   <body>
+      <script>
+          function longest(str) {
+              var text = str.split(' ');
+              var res = 0;
+              var end = ""
+              for (var i = 0; i < text.length; i++) {
+                  if (text[i].length > res) {
+                      res = text[i].length;
+                      end = text[i];
+                  }
+              }
+              return end;
+          }
+
+          console.log(longest("a bbbb ccc"));
+      </script>
+   </body>
+</html>
+
